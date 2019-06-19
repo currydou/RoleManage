@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--尽量用照规范好的-->
+    <!--=======================规范=============================-->
+    <!--========主色-->
+    <color name="base_yellow">#FFDC00</color><!--文字链接、强调可点击。如tab、导航、多选等当前选中状态-->
+    <color name="accent_text_color">#FFC945</color><!--文字强调色-->
+    <color name="base_bg_color">#F5F5F5</color><!--背景色,适用于所有背景、底板-->
+    <!--字体色-->
+    <color name="deepest_black">#1E1E1E</color><!--最深的黑色-->
+    <color name="normal_black">#666666</color>
+    <color name="deep_gray">#999999</color>
+    <color name="normal_gray">#BBBBBB</color>
+    <color name="light_gray">#CCCCCC</color>
+
+    <color name="line_color">#EEEEEE</color>  <!--线条-->
+    <color name="base_green">#1CAA41</color><!--确认，同意，审核通过等-->
+    <color name="base_red">#EB1E1E</color><!--删除icon、未完成，错误-->
+    <color name="base_blue">#128CE6</color><!--文字按钮，公告提醒等-->
+    <color name="white">#fff</color>
+    <!--=======================规范=============================-->
+
+</resources>

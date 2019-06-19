@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+buildscript {
+    ext.kotlin_version = '1.2.71'
+    ext.navigationVersion = '1.0.0-alpha05'
+    repositories {
+        //下载auto-value(在项目的 Gradle 文件里，配置国内源（将 jcenter（）注掉或者删掉)
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+
+        //Gradle的Emas服务插件会加载您下载的 aliyun-emas-services.json 文件。请修改工程的build.gradle使用该插件(阿里云推送新增)
+        maven {url 'http://maven.aliyun.com/nexus/content/repositories/releases/'}
+
+//        jcenter()
+        google()
+        //maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+        // 添加emas-services插件(阿里云推送新增)
+        classpath 'com.aliyun.ams:emas-services:1.0.1'
+
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/releases/' }
+//        jcenter()
+        google()
+        mavenCentral()
+        maven { url "https://dl.google.com/dl/android/maven2/" }
+        //maven { url "https://jitpack.io" }
+        maven { url "http://dev.yodoo.net.cn:18082/nexus/content/repositories/android/" }
+        maven { url "http://dev.yodoo.net.cn:18082/nexus/content/repositories/android/release" }
+        maven { url "http://dev.yodoo.net.cn:18082/nexus/content/repositories/android/snapshot" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RoleManage</string>
+    <string name="network_abnormal">网络异常</string>
+    <string name="loading2">加载中…</string>
+
+
+</resources>

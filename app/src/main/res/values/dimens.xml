@@ -1,0 +1,60 @@
+<resources>
+
+
+                    <!--尽量用照规范好的-->
+    <!--=======================规范=============================-->
+    <dimen name="textSize_biggest">24sp</dimen>
+    <dimen name="textSize_big">20sp</dimen>
+    <dimen name="textSize_middle">18sp</dimen>
+    <dimen name="textSize_small">16sp</dimen>
+    <dimen name="textSize_mix">14sp</dimen>
+    <dimen name="textSize_tip">12sp</dimen>
+    <!--=======================规范=============================-->
+
+    <dimen name="izhuo_height_line">0.5dp</dimen>
+    <dimen name="izhuo_margin_login_top">30dp</dimen>
+    <dimen name="izhuo_radius_comment">4dp</dimen>
+    <dimen name="izhuo_padding_edit">10dp</dimen>
+    <dimen name="izhuo_height_button">50dp</dimen>
+    <dimen name="izhuo_padding_edit_onself">15dp</dimen>
+    <dimen name="izhuo_paddingLeft_personal">15dp</dimen>
+    <dimen name="izhuo_line_spacing_extra_favour">5dp</dimen>
+    <dimen name="height_top_bar">46dp</dimen>
+    <dimen name="action_bar_default_height_material">46dp</dimen>
+    <dimen name="list_view_padding_bottom">5dp</dimen>
+    <dimen name="list_view_line_margin">10dp</dimen>
+    <dimen name="delete_item_width">60dp</dimen>
+    <dimen name="invoice_folder_delete_item_width">80dp</dimen>
+    <dimen name="bill_account_delete_item_width">100dp</dimen>
+    <dimen name="btnHeight">40dp</dimen>
+    <dimen name="userIconWidth">60dp</dimen>
+    <dimen name="marginLeftRight">15dp</dimen>
+    <dimen name="cover_border_width">10px</dimen>
+    <dimen name="list_header_height">35dp</dimen>
+    <dimen name="default_circle_indicator_radius">6dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">0dp</dimen>
+    <dimen name="default_guide_indicator_corner_radius">0dp</dimen>
+    <dimen name="default_guide_indicator_distance">30dp</dimen>
+    <dimen name="default_guide_indicator_radius_x">12dp</dimen>
+    <dimen name="line_thickness">2px</dimen>
+    <dimen name="default_common_item_right_text_padding_right">8dp</dimen>
+    <dimen name="default_common_item_right_drawable_margin_right">0dp</dimen>
+
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_18">18dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+
+    <dimen name="sp_22">22sp</dimen>
+
+
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_default_height_material"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/white"
+    app:contentInsetStart="0dp"
+    app:layout_scrollFlags="scroll|snap">
+
+    <RelativeLayout
+        android:id="@+id/rlLeft"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left">
+        <!--
+        android:background="@drawable/back_selector"-->
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:src="@drawable/btn_back_black" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="80dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:textColor="@color/deepest_black"
+        android:textSize="@dimen/textSize_middle" />
+
+    <FrameLayout
+        android:id="@+id/flRight"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/deepest_black"
+            android:layout_gravity="right"
+            android:drawablePadding="5dp"
+            android:gravity="center|right"
+            android:textSize="@dimen/textSize_mix" />
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right" />
+
+    </FrameLayout>
+
+</android.support.v7.widget.Toolbar>

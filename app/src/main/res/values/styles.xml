@@ -1,0 +1,66 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--==========================================系统主题、Activity=================================================-->
+
+    <style name="baseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/fkb_animation</item>
+        <item name="android:actionBarSize">@dimen/action_bar_default_height_material</item>
+        <item name="actionBarSize">?android:actionBarSize</item>
+        <item name="actionBarDivider">@null</item>
+        <item name="android:actionBarDivider">@null</item>
+        <!--<item name="buttonStyle">@style/myButtonStyle</item>-->
+        <!--<item name="android:progressBarStyle">@style/myProgressBarStyle</item>-->
+        <item name="android:textCursorDrawable">@drawable/shape_base_cursor</item>
+        <item name="android:datePickerStyle">@style/MyDatePicker</item>
+        <item name="android:timePickerStyle">@style/MyTimePicker</item>
+        <item name="elevation">0dp</item>
+        <item name="android:screenOrientation">portrait</item>
+        <!--<item name="android:statusBarColor">@color/white</item>-->
+        <item name="actionBarStyle">@style/actionYellowBarStyle</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:smoothScrollbar">false</item>
+        <item name="android:fastScrollAlwaysVisible">false</item>
+        <item name="colorPrimary">@color/base_yellow</item>
+        <!--<item name="colorPrimaryDark">@color/base_yellow</item>
+        <item name="colorAccent">@color/base_yellow</item>-->
+    </style>
+
+    <style name="MyDatePicker" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <style name="MyTimePicker" parent="@android:style/Widget.Material.Light.TimePicker">
+        <item name="android:timePickerMode">spinner</item>
+        <item name="android:calendarViewShown">false</item>
+    </style>
+
+    <style name="actionYellowBarStyle" >
+        <item name="background">@color/base_yellow</item>
+        <item name="android:background">@color/base_yellow</item>
+    </style>
+
+    <style name="progressbar_translucent" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        <!--背景颜色及透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <!--==========================================动画=================================================-->
+    <style name="fkb_animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_from_left</item>
+    </style>
+
+
+
+</resources>
