@@ -11,10 +11,22 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            //测试环境
+            debuggable true
+            //测试环境
+            buildConfigField "String", "BASE_URL", "\"https://mx.atpiao.net/\""
+            buildConfigField "boolean", "RELEASE", "false"
+            buildConfigField "String", "MIN_APP_ID", "\"gh_339a7e651547\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 

@@ -1,12 +1,12 @@
-package com.example.administrator.rolemanage;
+package com.example.administrator.rolemanage.module.login;
 
 import android.os.Bundle;
 
+import com.example.administrator.rolemanage.R;
 import com.example.administrator.rolemanage.base.activitynew.BaseActivity;
 import com.example.administrator.rolemanage.base.basecontractT.BasePresenterT;
 
-public class MainActivity extends BaseActivity {
-
+public class LoginActivity extends BaseActivity {
 
 
     @Override
