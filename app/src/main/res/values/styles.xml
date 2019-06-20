@@ -52,6 +52,25 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
+    <style name="DialogTransparentActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="commentEditTextBottomLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textSize_mix</item>
+        <item name="android:textColorHint">@color/normal_gray</item>
+        <item name="android:textColor">@color/deepest_black</item>
+        <item name="android:paddingTop">@dimen/dp_16</item>
+        <item name="android:paddingBottom">@dimen/dp_16</item>
+        <item name="android:background">@drawable/at_etbg_bottom_line</item>
+    </style>
 
     <!--==========================================动画=================================================-->
     <style name="fkb_animation">

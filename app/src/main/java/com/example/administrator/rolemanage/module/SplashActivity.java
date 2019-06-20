@@ -45,9 +45,9 @@ public class SplashActivity extends BaseActivity {
 
     private void goMainActivity() {
         if (PerfUtil.isLogin()) {
-            startActivity(new Intent(mContext, LoginActivity.class));
-        } else {
             startActivity(new Intent(mContext, MainActivity.class));
+        } else {
+            startActivity(new Intent(mContext, LoginActivity.class));
         }
         finish();
     }

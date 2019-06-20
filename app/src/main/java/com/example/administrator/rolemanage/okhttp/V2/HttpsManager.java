@@ -1,8 +1,8 @@
 package com.example.administrator.rolemanage.okhttp.V2;
 
 
-import com.yodoo.atinvoice.BuildConfig;
-import com.yodoo.atinvoice.base.FeiKongBaoApplication;
+import com.example.administrator.rolemanage.BuildConfig;
+import com.example.administrator.rolemanage.base.MyApplication;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,10 +26,10 @@ public class HttpsManager {
 
     public static void buildSSLSocketFactory(OkHttpClient.Builder builder) {
         try {
-            if (BuildConfig.RELEASE) {
-                getSSLSocketFactory(builder, FeiKongBaoApplication.instance.getAssets().open("service-atpiao.crt"));
+            if (BuildConfig.DEBUG) {
+                getSSLSocketFactory(builder, MyApplication.instance.getAssets().open("service-atpiao.crt"));
             } else {
-                getSSLSocketFactory(builder, FeiKongBaoApplication.instance.getAssets().open("public-cert.crt"));
+                getSSLSocketFactory(builder, MyApplication.instance.getAssets().open("public-cert.crt"));
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -2,6 +2,12 @@
     <string name="app_name">RoleManage</string>
     <string name="network_abnormal">网络异常</string>
     <string name="loading2">加载中…</string>
+    <string name="login">登录</string>
+    <string name="hint_input_mobile">请输入手机号</string>
+    <string name="hint_input_pws">请输入登录密码</string>
+    <string name="system_notification">系统通知</string>
+    <string name="relogin">登录过期，请重新登录</string>
+    <string name="izhuo_lable_sure">确定</string>
 
 
 </resources>

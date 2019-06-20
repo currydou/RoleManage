@@ -91,7 +91,7 @@ public class RequestParams {
                 headers.add(key, value);
             }
         }*/
-        String token = PerfUtil.getUserInfoNotNull().getLoginToken();
+        String token = PerfUtil.getUserInfoNotNull().getToken();
         addHeader("token", token);
         addHeader("charset", "UTF-8");
         addHeader("user-agent", HttpUtil.LOGIN_TYPE);

@@ -7,8 +7,8 @@ import android.support.annotation.IntDef;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.administrator.rolemanage.BuildConfig;
 import com.google.gson.Gson;
-import com.yodoo.atinvoice.BuildConfig;
 
 import java.io.UnsupportedEncodingException;
 import java.lang.annotation.Retention;

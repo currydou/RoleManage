@@ -31,7 +31,7 @@ import me.jessyan.rxerrorhandler.handler.listener.ResponseErrorListener;
  * Created by lib on 2017/2/24.
  */
 
-public class FeiKongBaoApplication extends MultiDexApplication implements App{//MultiDexApplication
+public class MyApplication extends MultiDexApplication implements App{//MultiDexApplication
 
     public static Application instance;
     // 保存所有的Activity

@@ -15,9 +15,7 @@ android {
             //测试环境
             debuggable true
             //测试环境
-            buildConfigField "String", "BASE_URL", "\"https://mx.atpiao.net/\""
-            buildConfigField "boolean", "RELEASE", "false"
-            buildConfigField "String", "MIN_APP_ID", "\"gh_339a7e651547\""
+            buildConfigField "String", "BASE_URL", "\"http://192.168.1.182:8002/\""
         }
         release {
             minifyEnabled false

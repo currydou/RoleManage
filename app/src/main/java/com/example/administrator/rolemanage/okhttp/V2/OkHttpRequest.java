@@ -4,14 +4,14 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
-import com.yodoo.atinvoice.R;
-import com.yodoo.atinvoice.base.FeiKongBaoApplication;
-import com.yodoo.atinvoice.constant.HttpConstant;
-import com.yodoo.atinvoice.model.base.BaseResponse;
-import com.yodoo.atinvoice.utils.organized.JsonDecoder;
-import com.yodoo.atinvoice.utils.organized.StringUtils;
-import com.yodoo.atinvoice.utils.organized.ToastUtils;
-import com.yodoo.atinvoice.utils.other.IntentUtils;
+import com.example.administrator.rolemanage.R;
+import com.example.administrator.rolemanage.base.MyApplication;
+import com.example.administrator.rolemanage.constant.HttpConstant;
+import com.example.administrator.rolemanage.model.base.BaseResponse;
+import com.example.administrator.rolemanage.utils.businessutil.IntentUtils;
+import com.example.administrator.rolemanage.utils.organized.JsonDecoder;
+import com.example.administrator.rolemanage.utils.organized.StringUtils;
+import com.example.administrator.rolemanage.utils.organized.ToastUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -30,9 +30,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static com.yodoo.atinvoice.okhttp.V2.HttpUtil.GET;
-import static com.yodoo.atinvoice.okhttp.V2.HttpUtil.POST;
-import static com.yodoo.atinvoice.okhttp.V2.HttpUtil.judgeIfHttps;
 
 /**
  */
@@ -44,7 +41,7 @@ public class OkHttpRequest {
 
     private static OkHttpRequest instance;
 
-    private String networkError = FeiKongBaoApplication.instance.getString(R.string.network_error);
+    private String networkError = MyApplication.instance.getString(R.string.network_abnormal);
 
     private OkHttpClient okHttpClient;
 
@@ -94,32 +91,32 @@ public class OkHttpRequest {
 
     public void getEnqueue(String url, RequestParams params, BaseCallback callback, Type type) {
         //  2018/5/16  超时时间
-        enqueueRequest(GET, url, params, callback, type);
+        enqueueRequest(HttpUtil.GET, url, params, callback, type);
     }
 
     public void postEnqueue(String url, RequestParams params, BaseCallback callback, Type type) {
         //  2018/5/16  超时时间
-        enqueueRequest(POST, url, params, callback, type);
+        enqueueRequest(HttpUtil.POST, url, params, callback, type);
     }
 
     private void enqueueRequest(@HttpUtil.RequestMethod int requestMethod, String url,
                                 RequestParams params, BaseCallback callback, final Type type) {
         try {
-            if (!HttpUtil.isNetAvailable(FeiKongBaoApplication.instance)) {
+            if (!HttpUtil.isNetAvailable(MyApplication.instance)) {
                 //2018/5/16  show toast网络错误
                 callback.onFailure(networkError);
                 callback.onNetWorkFailure();
                 return;
             }
-            useHttps = judgeIfHttps(url);
+            useHttps = HttpUtil.judgeIfHttps(url);
             callback.onStart();
             Request.Builder builder = new Request.Builder();
             switch (requestMethod) {
-                case GET:
+                case HttpUtil.GET:
                     url = HttpUtil.getFullUrl(url, params.getParamsList(), params.isUrlEncoder());
                     builder.get();
                     break;
-                case POST:
+                case HttpUtil.POST:
                     builder.post(new ProgressRequestBody(params.getRequestBody(), new ProgressCallBackDelegate(callback)));
                     break;
             }
@@ -137,18 +134,18 @@ public class OkHttpRequest {
 
     private String executeRequest(@HttpUtil.RequestMethod int requestMethod, String url, RequestParams params) {
         try {
-            if (!HttpUtil.isNetAvailable(FeiKongBaoApplication.instance)) {
+            if (!HttpUtil.isNetAvailable(MyApplication.instance)) {
                 // 2018/5/16  show toast网络错误
                 return networkError;
             }
-            useHttps = judgeIfHttps(url);
+            useHttps = HttpUtil.judgeIfHttps(url);
             Request.Builder builder = new Request.Builder();
             switch (requestMethod) {
-                case GET:
+                case HttpUtil.GET:
                     url = HttpUtil.getFullUrl(url, params.getParamsList(), params.isUrlEncoder());
                     builder.get();
                     break;
-                case POST:
+                case HttpUtil.POST:
                     builder.post(params.getRequestBody());
                     break;
             }
@@ -207,12 +204,12 @@ public class OkHttpRequest {
             responseJson = response.body().string();
             HttpUtil.log_d(HttpUtil.getUrlEndName(call) + "\n" + "请求onResponse:" + responseJson);
             if (responseJson.contains(HttpConstant.HttpRespKey.KEY_CODE) &&
-                    responseJson.contains(HttpConstant.HttpRespKey.KEY_MESSAGE)) {  //是否有code和message
+                    responseJson.contains(HttpConstant.HttpRespKey.KEY_MSG)) {  //是否有code和message
                 if (responseJson.contains(HttpConstant.HttpRespKey.KEY_CODE)) {
                     code = JsonDecoder.getInt(responseJson, HttpConstant.HttpRespKey.KEY_CODE);
                 }
-                if (responseJson.contains(HttpConstant.HttpRespKey.KEY_MESSAGE)) {
-                    message = JsonDecoder.getString(responseJson, HttpConstant.HttpRespKey.KEY_MESSAGE);
+                if (responseJson.contains(HttpConstant.HttpRespKey.KEY_MSG)) {
+                    message = JsonDecoder.getString(responseJson, HttpConstant.HttpRespKey.KEY_MSG);
                 }
                 if (handleCodeHere(code, responseJson)) {
                     return;
@@ -253,7 +250,7 @@ public class OkHttpRequest {
                 case HttpConstant.HttpCode.CODE_10002://token失效
                     ToastUtils.dismissProcessDialog();
                     ToastUtils.dismissProcessBar();
-                    IntentUtils.entryTokenNotValide(FeiKongBaoApplication.instance);
+                    IntentUtils.entryTokenNotValide(MyApplication.instance);
                     handleHere = true;
                     break;
             }

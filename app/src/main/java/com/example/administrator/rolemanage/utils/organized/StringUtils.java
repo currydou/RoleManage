@@ -9,7 +9,7 @@ import android.util.Base64;
 import android.util.Log;
 
 import com.example.administrator.rolemanage.BuildConfig;
-import com.example.administrator.rolemanage.base.FeiKongBaoApplication;
+import com.example.administrator.rolemanage.base.MyApplication;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
@@ -376,14 +376,14 @@ public class StringUtils {
     }
 
     public static int getColorById(int cId) {
-        return FeiKongBaoApplication.instance.getResources().getColor(cId);
+        return MyApplication.instance.getResources().getColor(cId);
     }
 
     public static String getVersion() {
-        PackageManager packageManager = FeiKongBaoApplication.instance.getPackageManager();
+        PackageManager packageManager = MyApplication.instance.getPackageManager();
         try {
             PackageInfo packInfo = packageManager.getPackageInfo(
-                    FeiKongBaoApplication.instance.getPackageName(), 0);
+                    MyApplication.instance.getPackageName(), 0);
             return packInfo.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();

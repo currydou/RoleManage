@@ -21,5 +21,11 @@ public class ApiManager {
         }.getType());
     }
 
+    public static void logout(RequestParams requestParams, BaseCallback callBack) {//
+        String url = BuildConfig.BASE_URL + Constant.URL_LOGOUT;
+        OkHttpRequest.getInstance().postEnqueue(url, requestParams, callBack, new TypeToken<BaseResponse<Object>>() {
+        }.getType());
+    }
+
 
 }

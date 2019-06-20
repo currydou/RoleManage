@@ -18,6 +18,7 @@
     <color name="base_red">#EB1E1E</color><!--删除icon、未完成，错误-->
     <color name="base_blue">#128CE6</color><!--文字按钮，公告提醒等-->
     <color name="white">#fff</color>
+    <color name="bottom_btn_color">#401500</color>
     <!--=======================规范=============================-->
 
 </resources>

@@ -10,13 +10,10 @@ import com.example.administrator.rolemanage.model.base.BaseModel;
 public class UserInfo extends BaseModel {
 
     private String id;
-    //新加的字段
-    private String uuid;
     private String token;
-    private String companyName;
-    private String name;
+    private String username;
     private String number;
-    private String password;
+    private String passWord;
     private String userType;
     private String departmentId;
     private String email;
@@ -30,58 +27,31 @@ public class UserInfo extends BaseModel {
     private String userStatus;
     private String invoiceEmail;
     private String invoiceEmailRegisted;
-    private String orgId;
-    private String headEtag;
-    private String headUrl;
-    private String joinStatus;
+    private String headerUrl;
 
-    public String getUuid() {
-        return uuid;
+
+    public String getId() {
+        return id;
     }
 
-    public void setUuid(String uuid) {
-        this.uuid = uuid;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getJoinStatus() {
-        return joinStatus;
-    }
-
-    public void setJoinStatus(String joinStatus) {
-        this.joinStatus = joinStatus;
-    }
-
-    public String getHeadUrl() {
-        return headUrl;
-    }
-
-    public void setHeadUrl(String headUrl) {
-        this.headUrl = headUrl;
-    }
-
-    public String getHeadEtag() {
-        return headEtag;
-    }
-
-    public void setHeadEtag(String headEtag) {
-        this.headEtag = headEtag;
-    }
-
-
-    public String getCompanyName() {
-        return companyName;
-    }
-
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public String getLoginToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setLoginToken(String loginToken) {
-        this.token = loginToken;
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getUserStatus() {
@@ -108,28 +78,12 @@ public class UserInfo extends BaseModel {
         this.invoiceEmailRegisted = invoiceEmailRegisted;
     }
 
-    public String getOrgId() {
-        return orgId;
+    public String getHeaderUrl() {
+        return headerUrl;
     }
 
-    public void setOrgId(String orgId) {
-        this.orgId = orgId;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setHeaderUrl(String headerUrl) {
+        this.headerUrl = headerUrl;
     }
 
     public String getNumber() {
@@ -140,12 +94,12 @@ public class UserInfo extends BaseModel {
         this.number = number;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPassWord() {
+        return passWord;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getUserType() {

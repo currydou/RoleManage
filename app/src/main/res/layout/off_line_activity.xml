@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99999999"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/izhuo_margin_login_top" >
+
+    <LinearLayout
+        android:id="@+id/rl1_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/izhuo_shape_comment_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/izhuo_line_spacing_extra_favour"
+            android:layout_marginLeft="@dimen/izhuo_paddingLeft_personal"
+            android:layout_marginRight="@dimen/izhuo_paddingLeft_personal"
+            android:layout_marginTop="@dimen/izhuo_paddingLeft_personal"
+            android:gravity="center"
+            android:text="@string/system_notification"
+            android:textColor="@color/deepest_black"
+            android:textSize="@dimen/textSize_middle"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/fl_custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/izhuo_paddingLeft_personal"
+            android:layout_marginRight="@dimen/izhuo_paddingLeft_personal"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/izhuo_paddingLeft_personal"
+            android:layout_marginRight="@dimen/izhuo_paddingLeft_personal"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/izhuo_padding_edit"
+            android:text="@string/relogin"
+            android:textColor="@color/normal_black"
+            android:textSize="@dimen/textSize_small" />
+
+        <LinearLayout
+            android:id="@+id/ll_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/izhuo_height_button"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/izhuo_tv_click_left_down"
+                android:gravity="center"
+                android:text="@string/izhuo_lable_sure"
+                android:textColor="@color/accent_text_color"
+                android:textSize="@dimen/textSize_middle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

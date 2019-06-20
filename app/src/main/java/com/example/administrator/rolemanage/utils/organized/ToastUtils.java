@@ -22,16 +22,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnKeyListener;
 import android.os.Handler;
-import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrator.rolemanage.R;
-import com.example.administrator.rolemanage.base.FeiKongBaoApplication;
+import com.example.administrator.rolemanage.base.MyApplication;
 import com.example.administrator.rolemanage.view.ProgressBar1;
 
 
@@ -56,11 +50,11 @@ public class ToastUtils {
     }
 
     public static void showToast(final int id) {
-        showToast(FeiKongBaoApplication.instance.getResources().getString(id));
+        showToast(MyApplication.instance.getResources().getString(id));
     }
 
     public static void showToast(Context context, int id) {
-        showToast(context,FeiKongBaoApplication.instance.getString(id));
+        showToast(context, MyApplication.instance.getString(id));
     }
 
     public static void showToast(final String info) {
@@ -70,7 +64,7 @@ public class ToastUtils {
             public void run() {
                 try {
                     //showToast(info, Toast.LENGTH_SHORT, 0);
-                    Toast.makeText(FeiKongBaoApplication.instance, info, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MyApplication.instance, info, Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
